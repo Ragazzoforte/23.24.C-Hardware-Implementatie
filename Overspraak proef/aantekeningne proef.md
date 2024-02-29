@@ -1,0 +1,1 @@
+geleider 2 = 109 ohm naar ground.
