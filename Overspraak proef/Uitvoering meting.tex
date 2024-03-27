@@ -25,11 +25,21 @@ In de afbeeldingen is channel 1 nabij en channel 2 verre eind
     Bij de Capacitieve overspraak is te zien in afbeelding \ref{fig:capacitief met probe} en \ref{fig:capacitief met coax} dat er nagenoeg geen verschil zit tussen het begin en het eind. Dit komt omdat de lijn aan het eind niet is afgesloten en hierdoor het signaal in fase terug komt.
 
 
-    \item  Bereken met behulp van de meetresultaten en de theorie uit ref. 3. de waarde van de
-    koppel- capaciteit tussen de twee geleiders.
+    \item  Bereken met behulp van de meetresultaten en de theorie uit ref. 3. de waarde van de koppel- capaciteit tussen de twee geleiders.
+    
+    \begin{equation}
+        \begin{split}
+            U_{onc} = U_{ovc} &= Z_{0} \cdot \frac{j \omega c_{12} \cdot u_{g}}{2}\\
+            0,04 &= 220 \cdot \frac{10^6 c_{12} \cdot 20}{2}\\
+            &\Downarrow \\
+            C_{12} &= 181 nF
+        \end{split}
+    \end{equation}
 
     \item Evalueer het resultaat. Klopt de ordegrootte van het resultaat en op basis waarvan is dit beoordeeld.
 \end{enumerate}
+
+\newpage
 
 \subsection{Inductieve overspraak}
 \begin{enumerate}
@@ -55,11 +65,21 @@ In de afbeeldingen is channel 1 nabij en channel 2 verre eind
     \item Bereken met behulp van de meetresultaten en de theorie uit ref. 3 de waarde van de
     mutuele zelfinductie tussen de twee geleiders.
 
+    \begin{equation}
+        \begin{split}
+            U_{oni} &= j \omega L_{M} \cdot \frac{U_{g}}{2 \cdot Z_{0}}\\
+            0,04 &= 10^6 L_{M} \cdot \frac{20}{2 \cdot 220}\\
+            &\Downarrow \\
+            L_{M} &= 8,8 \mu H
+        \end{split}
+    \end{equation}
+
     \item Evalueer het resultaat. Klopt de ordegrootte van het resultaat en op basis waarvan is dit
     beoordeeld.
 
 \end{enumerate}
 
+\newpage
 
 \subsection{Gelijktijdig capacitieve- en inductieve overspraak}
 \begin{enumerate}
@@ -87,5 +107,27 @@ In de afbeeldingen is channel 1 nabij en channel 2 verre eind
     \item Verklaar aan de hand van de theorie waarom deze spanningen er zo uit zien.
     
     \item Verklaar de amplitude van de overspraak aan de nabije zijde doormiddel van een berekening.
+    
+    \begin{equation}
+        \begin{split}
+            U_{onc} &= Z_{0} \cdot \frac{j \omega C \cdot \frac{Z_{0}}{Z_{0}+ Z_{0}} \cdot U_{g}}{2}\\
+            U_{onc} &= 220 \cdot \frac{10^6 \cdot 1,8 \cdot 10^{-11} \cdot 0,5 \cdot 20}{2}\\
+            &\Downarrow \\
+            U_{onc} &= 0,0198 V
+            \\
+            \\
+            \\
+            U_{oni} &= j \omega L_{M} \cdot \frac{U_{g}}{4 \cdot Z_{0}}\\
+            U_{oni} &= 10^6 \cdot 8,8 \cdot 10^{-7} \cdot \frac{20}{2 \cdot 220}\\
+            &\Downarrow \\
+            U_{oni} &= 0,02 V\\
+            \\
+            \\
+            \\
+            U_{on} &= U_{onc} + U_{oni}\\
+            &\Downarrow \\
+            U_{on} &= 0,0398 V
+        \end{split}
+    \end{equation}
 
 \end{enumerate}
